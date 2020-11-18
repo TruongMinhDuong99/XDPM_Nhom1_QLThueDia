@@ -27,5 +27,26 @@ namespace DATA
             }
             return false;
         }
+        public bool DoiMatKhau(string tenDN,string mkCu,string mkMoi)
+        {
+            TaiKhoan tk = db.TaiKhoans.Where(x => x.TenDN == tenDN).FirstOrDefault();
+            if (tk == null)
+            {              
+                return false;
+            }
+            else
+            {
+                if (tk.MatKhau.Equals(mkCu))
+                {
+                    tk.MatKhau = mkMoi;
+                    db.SubmitChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }                                
+            }
+        }
     }
 }

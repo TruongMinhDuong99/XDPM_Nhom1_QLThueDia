@@ -16,15 +16,16 @@ namespace XDPM_Nhom1_QLThueDia
     {
         private eTaiKhoan eTK;
         private busTaiKhoan busTK;
+        public string tenDN;
         public DangNhap()
         {
             InitializeComponent();
-            txbMatKhau.PasswordChar = '*';
+            tbxMatKhau.PasswordChar = '*';
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            eTK = new eTaiKhoan(txbTenDangNhap.Text,txbMatKhau.Text);
+            eTK = new eTaiKhoan(tbxTenDangNhap.Text,tbxMatKhau.Text);
             busTK = new busTaiKhoan();
             if (busTK.DangNhap(eTK))
             {
@@ -34,14 +35,13 @@ namespace XDPM_Nhom1_QLThueDia
                     frm.Close();
                 }
                 this.Close();
-                btnDangNhap.DialogResult = DialogResult.OK;
-               
-
+                tenDN = eTK.tenDN;
+                this.DialogResult = DialogResult.OK;
             }
             else
             {
                 MessageBox.Show("Đăng nhập thất bại !");
-                btnDangNhap.DialogResult = DialogResult.Cancel;
+                this.DialogResult = DialogResult.Cancel;
             }
         }
 

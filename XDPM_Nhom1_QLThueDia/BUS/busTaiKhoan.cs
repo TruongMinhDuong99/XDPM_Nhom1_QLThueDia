@@ -19,5 +19,9 @@ namespace BUS
         {
             return dalTK.DangNhap(input);
         }
+        public bool DoiMatKhau(string tenDN,string mkCu, string mkMoi)
+        {
+            return dalTK.DoiMatKhau(tenDN,mkCu, mkMoi);
+        }
     }
 }

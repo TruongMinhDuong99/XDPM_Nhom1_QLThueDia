@@ -1,6 +1,6 @@
 ﻿namespace XDPM_Nhom1_QLThueDia
 {
-    partial class DangNhap
+    partial class DoiMatKhau
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,11 @@
         {
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
-            this.btnDangNhap = new DevComponents.DotNetBar.ButtonX();
-            this.tbxMatKhau = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tbxTenDangNhap = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnDoiMatKhau = new DevComponents.DotNetBar.ButtonX();
+            this.tbxNhapLai = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tbxMatKhauMoi = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tbxMatKhauCu = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1.SuspendLayout();
@@ -43,15 +45,17 @@
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel1.Controls.Add(this.btnThoat);
-            this.groupPanel1.Controls.Add(this.btnDangNhap);
-            this.groupPanel1.Controls.Add(this.tbxMatKhau);
-            this.groupPanel1.Controls.Add(this.tbxTenDangNhap);
+            this.groupPanel1.Controls.Add(this.btnDoiMatKhau);
+            this.groupPanel1.Controls.Add(this.tbxNhapLai);
+            this.groupPanel1.Controls.Add(this.tbxMatKhauMoi);
+            this.groupPanel1.Controls.Add(this.tbxMatKhauCu);
+            this.groupPanel1.Controls.Add(this.labelX3);
             this.groupPanel1.Controls.Add(this.labelX2);
             this.groupPanel1.Controls.Add(this.labelX1);
             this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.Location = new System.Drawing.Point(12, 12);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(387, 171);
+            this.groupPanel1.Size = new System.Drawing.Size(329, 206);
             // 
             // 
             // 
@@ -81,60 +85,83 @@
             // 
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 0;
-            this.groupPanel1.Text = "Thông tin đăng nhập";
-            this.groupPanel1.Click += new System.EventHandler(this.groupPanel1_Click);
+            this.groupPanel1.Text = "Thông tin đổi mật khẩu";
             // 
             // btnThoat
             // 
             this.btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnThoat.Location = new System.Drawing.Point(205, 106);
+            this.btnThoat.Location = new System.Drawing.Point(165, 136);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Size = new System.Drawing.Size(75, 28);
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThoat.TabIndex = 5;
+            this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // btnDangNhap
+            // btnDoiMatKhau
             // 
-            this.btnDangNhap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDangNhap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDangNhap.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnDangNhap.Location = new System.Drawing.Point(85, 106);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
-            this.btnDangNhap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnDangNhap.TabIndex = 4;
-            this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            this.btnDoiMatKhau.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDoiMatKhau.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnDoiMatKhau.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(68, 136);
+            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(75, 29);
+            this.btnDoiMatKhau.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnDoiMatKhau.TabIndex = 6;
+            this.btnDoiMatKhau.Text = "Xác nhận";
+            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
             // 
-            // tbxMatKhau
-            // 
-            // 
-            // 
-            // 
-            this.tbxMatKhau.Border.Class = "TextBoxBorder";
-            this.tbxMatKhau.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbxMatKhau.Location = new System.Drawing.Point(120, 65);
-            this.tbxMatKhau.Name = "tbxMatKhau";
-            this.tbxMatKhau.PreventEnterBeep = true;
-            this.tbxMatKhau.Size = new System.Drawing.Size(234, 20);
-            this.tbxMatKhau.TabIndex = 3;
-            // 
-            // tbxTenDangNhap
+            // tbxNhapLai
             // 
             // 
             // 
             // 
-            this.tbxTenDangNhap.Border.Class = "TextBoxBorder";
-            this.tbxTenDangNhap.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbxTenDangNhap.Location = new System.Drawing.Point(119, 19);
-            this.tbxTenDangNhap.Name = "tbxTenDangNhap";
-            this.tbxTenDangNhap.PreventEnterBeep = true;
-            this.tbxTenDangNhap.Size = new System.Drawing.Size(234, 20);
-            this.tbxTenDangNhap.TabIndex = 2;
+            this.tbxNhapLai.Border.Class = "TextBoxBorder";
+            this.tbxNhapLai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tbxNhapLai.Location = new System.Drawing.Point(101, 89);
+            this.tbxNhapLai.Name = "tbxNhapLai";
+            this.tbxNhapLai.PreventEnterBeep = true;
+            this.tbxNhapLai.Size = new System.Drawing.Size(197, 20);
+            this.tbxNhapLai.TabIndex = 5;
+            // 
+            // tbxMatKhauMoi
+            // 
+            // 
+            // 
+            // 
+            this.tbxMatKhauMoi.Border.Class = "TextBoxBorder";
+            this.tbxMatKhauMoi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tbxMatKhauMoi.Location = new System.Drawing.Point(101, 57);
+            this.tbxMatKhauMoi.Name = "tbxMatKhauMoi";
+            this.tbxMatKhauMoi.PreventEnterBeep = true;
+            this.tbxMatKhauMoi.Size = new System.Drawing.Size(197, 20);
+            this.tbxMatKhauMoi.TabIndex = 4;
+            // 
+            // tbxMatKhauCu
+            // 
+            // 
+            // 
+            // 
+            this.tbxMatKhauCu.Border.Class = "TextBoxBorder";
+            this.tbxMatKhauCu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tbxMatKhauCu.Location = new System.Drawing.Point(101, 25);
+            this.tbxMatKhauCu.Name = "tbxMatKhauCu";
+            this.tbxMatKhauCu.PreventEnterBeep = true;
+            this.tbxMatKhauCu.Size = new System.Drawing.Size(197, 20);
+            this.tbxMatKhauCu.TabIndex = 3;
+            // 
+            // labelX3
+            // 
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Location = new System.Drawing.Point(20, 86);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(75, 23);
+            this.labelX3.TabIndex = 2;
+            this.labelX3.Text = "Nhập lại : ";
             // 
             // labelX2
             // 
@@ -142,11 +169,11 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(20, 62);
+            this.labelX2.Location = new System.Drawing.Point(20, 54);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(93, 23);
+            this.labelX2.Size = new System.Drawing.Size(75, 23);
             this.labelX2.TabIndex = 1;
-            this.labelX2.Text = "Mật khẩu :";
+            this.labelX2.Text = "Mật khẩu mới :";
             // 
             // labelX1
             // 
@@ -154,21 +181,20 @@
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(20, 16);
+            this.labelX1.Location = new System.Drawing.Point(20, 22);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(93, 23);
+            this.labelX1.Size = new System.Drawing.Size(75, 23);
             this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "Tên đăng nhập :";
+            this.labelX1.Text = "Mật khẩu cũ : ";
             // 
-            // DangNhap
+            // DoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 200);
+            this.ClientSize = new System.Drawing.Size(353, 230);
             this.Controls.Add(this.groupPanel1);
-            this.Name = "DangNhap";
-            this.Text = "ĐĂNG NHẬP";
-            this.Load += new System.EventHandler(this.DangNhap_Load);
+            this.Name = "DoiMatKhau";
+            this.Text = "Đổi mật khẩu";
             this.groupPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -178,11 +204,12 @@
 
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.ButtonX btnThoat;
-        private DevComponents.DotNetBar.ButtonX btnDangNhap;
-        private DevComponents.DotNetBar.Controls.TextBoxX tbxMatKhau;
-        private DevComponents.DotNetBar.Controls.TextBoxX tbxTenDangNhap;
+        private DevComponents.DotNetBar.ButtonX btnDoiMatKhau;
+        private DevComponents.DotNetBar.Controls.TextBoxX tbxNhapLai;
+        private DevComponents.DotNetBar.Controls.TextBoxX tbxMatKhauMoi;
+        private DevComponents.DotNetBar.Controls.TextBoxX tbxMatKhauCu;
+        private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
     }
 }
-
