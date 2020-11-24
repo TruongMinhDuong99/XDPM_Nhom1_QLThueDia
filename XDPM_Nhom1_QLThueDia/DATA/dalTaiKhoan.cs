@@ -9,7 +9,6 @@ namespace DATA
 {
     public class dalTaiKhoan
     {
-        eTaiKhoan eTK = new eTaiKhoan();
         BangDiaDataClassesDataContext db;
         public dalTaiKhoan()
         {

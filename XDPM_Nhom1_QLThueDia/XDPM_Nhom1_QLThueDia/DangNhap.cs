@@ -29,11 +29,7 @@ namespace XDPM_Nhom1_QLThueDia
             busTK = new busTaiKhoan();
             if (busTK.DangNhap(eTK))
             {
-                MessageBox.Show("Đăng nhập thành công !");
-                foreach (Form frm in MdiChildren)
-                {
-                    frm.Close();
-                }
+                MessageBox.Show("Đăng nhập thành công !");               
                 this.Close();
                 tenDN = eTK.tenDN;
                 this.DialogResult = DialogResult.OK;

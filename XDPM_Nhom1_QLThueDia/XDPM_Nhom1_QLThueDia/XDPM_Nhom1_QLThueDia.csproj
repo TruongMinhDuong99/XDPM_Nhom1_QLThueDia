@@ -69,6 +69,18 @@
     <Compile Include="DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="XoaDatTruoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaDatTruoc.Designer.cs">
+      <DependentUpon>XoaDatTruoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemTraDiaTrong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiemTraDiaTrong.Designer.cs">
+      <DependentUpon>KiemTraDiaTrong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,11 +89,53 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DatTruoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatTruoc.Designer.cs">
+      <DependentUpon>DatTruoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemKhachHangDatTruoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemKhachHangDatTruoc.Designer.cs">
+      <DependentUpon>ThemKhachHangDatTruoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeDiaDangThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeDiaDangThue.Designer.cs">
+      <DependentUpon>ThongKeDiaDangThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeDiaTraTre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeDiaTraTre.Designer.cs">
+      <DependentUpon>ThongKeDiaTraTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeTongNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeTongNo.Designer.cs">
+      <DependentUpon>ThongKeTongNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemThongTinKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemThongTinKhachHang.Designer.cs">
+      <DependentUpon>XemThongTinKhachHang.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaDatTruoc.resx">
+      <DependentUpon>XoaDatTruoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemTraDiaTrong.resx">
+      <DependentUpon>KiemTraDiaTrong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -95,6 +149,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DatTruoc.resx">
+      <DependentUpon>DatTruoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemKhachHangDatTruoc.resx">
+      <DependentUpon>ThemKhachHangDatTruoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeDiaDangThue.resx">
+      <DependentUpon>ThongKeDiaDangThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeDiaTraTre.resx">
+      <DependentUpon>ThongKeDiaTraTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeTongNo.resx">
+      <DependentUpon>ThongKeTongNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemThongTinKhachHang.resx">
+      <DependentUpon>XemThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

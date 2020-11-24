@@ -78,7 +78,79 @@ namespace XDPM_Nhom1_QLThueDia
 
         private void xemThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            XemThongTinKhachHang frmXemTT = new XemThongTinKhachHang();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmXemTT.MdiParent = this;
+            frmXemTT.Show();
+        }
 
+        private void thôngTinĐĩaTrảTrễToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongKeDiaTraTre frmTKDiaTraTre = new ThongKeDiaTraTre();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmTKDiaTraTre.MdiParent = this;
+            frmTKDiaTraTre.Show();
+        }
+
+        private void đĩaThuêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongKeDiaDangThue frmDiaThue = new ThongKeDiaDangThue();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmDiaThue.MdiParent = this;
+            frmDiaThue.Show();
+        }
+
+        private void tổngThôngTinNợToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongKeTongNo frmTongNo = new ThongKeTongNo();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmTongNo.MdiParent = this;
+            frmTongNo.Show();
+        }
+
+        private void kiểmTraĐĩaTrốngTrongTiêuĐềToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KiemTraDiaTrong frmDiaTrong = new KiemTraDiaTrong();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmDiaTrong.MdiParent = this;
+            frmDiaTrong.Show();
+        }
+
+        private void đặtTrướcToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DatTruoc frmQLDT = new DatTruoc();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmQLDT.MdiParent = this;
+            frmQLDT.Show();
+        }
+
+        private void xóaĐặtTrướcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XoaDatTruoc frmXDT = new XoaDatTruoc();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmXDT.MdiParent = this;
+            frmXDT.Show();
         }
     }
 }

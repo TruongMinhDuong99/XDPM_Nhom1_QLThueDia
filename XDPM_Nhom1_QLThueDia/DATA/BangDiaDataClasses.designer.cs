@@ -966,6 +966,8 @@ namespace DATA
 		
 		private string _MaTieuDe;
 		
+		private string _MaDia;
+		
 		private EntityRef<KhachHang> _KhachHang;
 		
 		private EntityRef<TieuDe> _TieuDe;
@@ -984,6 +986,8 @@ namespace DATA
     partial void OnMaKhachHangChanged();
     partial void OnMaTieuDeChanging(string value);
     partial void OnMaTieuDeChanged();
+    partial void OnMaDiaChanging(string value);
+    partial void OnMaDiaChanged();
     #endregion
 		
 		public PhieuDat()
@@ -1097,6 +1101,26 @@ namespace DATA
 					this._MaTieuDe = value;
 					this.SendPropertyChanged("MaTieuDe");
 					this.OnMaTieuDeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaDia", DbType="NVarChar(50)")]
+		public string MaDia
+		{
+			get
+			{
+				return this._MaDia;
+			}
+			set
+			{
+				if ((this._MaDia != value))
+				{
+					this.OnMaDiaChanging(value);
+					this.SendPropertyChanging();
+					this._MaDia = value;
+					this.SendPropertyChanged("MaDia");
+					this.OnMaDiaChanged();
 				}
 			}
 		}

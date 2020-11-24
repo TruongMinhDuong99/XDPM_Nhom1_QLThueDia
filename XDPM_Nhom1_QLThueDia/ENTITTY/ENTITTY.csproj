@@ -51,7 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ePhieuDat.cs" />
+    <Compile Include="eDia.cs" />
+    <Compile Include="eKhachHang.cs" />
     <Compile Include="eTaiKhoan.cs" />
+    <Compile Include="eThongKeDiaDangThue.cs" />
+    <Compile Include="eThongKeDiaTraTre.cs" />
+    <Compile Include="eThongKeNoCuaKhachHang.cs" />
+    <Compile Include="eTieuDe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
