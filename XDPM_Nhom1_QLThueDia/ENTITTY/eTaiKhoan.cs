@@ -18,8 +18,6 @@ namespace ENTITTY
         }
         public eTaiKhoan()
         {
-           dfgdfgdfgd
         }
-        // cc
     }
 }
