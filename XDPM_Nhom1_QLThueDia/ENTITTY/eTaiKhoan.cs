@@ -18,6 +18,7 @@ namespace ENTITTY
         }
         public eTaiKhoan()
         {
+            // cmm loimoi
         }
     }
 }
