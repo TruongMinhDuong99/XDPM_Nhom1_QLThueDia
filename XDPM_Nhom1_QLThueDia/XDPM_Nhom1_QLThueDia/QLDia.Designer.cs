@@ -76,6 +76,7 @@
             this.btnXoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -87,6 +88,7 @@
             this.btnThem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm mới";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // tbxLoc
             // 
@@ -98,8 +100,9 @@
             this.tbxLoc.Location = new System.Drawing.Point(188, 22);
             this.tbxLoc.Name = "tbxLoc";
             this.tbxLoc.PreventEnterBeep = true;
-            this.tbxLoc.Size = new System.Drawing.Size(394, 27);
+            this.tbxLoc.Size = new System.Drawing.Size(394, 20);
             this.tbxLoc.TabIndex = 1;
+            this.tbxLoc.TextChanged += new System.EventHandler(this.tbxLoc_TextChanged);
             // 
             // labelX1
             // 
@@ -182,6 +185,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "QLDia";
             this.Text = "QLDia";
+            this.Load += new System.EventHandler(this.QLDia_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
