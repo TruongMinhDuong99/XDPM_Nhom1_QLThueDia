@@ -34,3 +34,4 @@ F:\C#\XDPM\XDPM_Nhom1_QLThueDia\XDPM_Nhom1_QLThueDia\obj\Debug\XDPM_Nhom1_QLThue
 F:\C#\XDPM\XDPM_Nhom1_QLThueDia\XDPM_Nhom1_QLThueDia\obj\Debug\XDPM_Nhom1_QLThueDia.DatTruoc.resources
 F:\C#\XDPM\XDPM_Nhom1_QLThueDia\XDPM_Nhom1_QLThueDia\obj\Debug\XDPM_Nhom1_QLThueDia.ThemKhachHangDatTruoc.resources
 F:\C#\XDPM\XDPM_Nhom1_QLThueDia\XDPM_Nhom1_QLThueDia\obj\Debug\XDPM_Nhom1_QLThueDia.XoaDatTruoc.resources
+F:\C#\XDPM\XDPM_Nhom1_QLThueDia\XDPM_Nhom1_QLThueDia\obj\Debug\XDPM_Nhom1_QLThueDia.GanDia.resources

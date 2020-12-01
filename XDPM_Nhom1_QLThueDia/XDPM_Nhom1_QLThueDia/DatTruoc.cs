@@ -17,6 +17,7 @@ namespace XDPM_Nhom1_QLThueDia
         List<eTieuDe> listTD;
         ePhieuDat dt;
         busPhieuDat busPD;
+        busKhachHang busKH;
         private string maKH;
         public DatTruoc()
         {
@@ -24,6 +25,10 @@ namespace XDPM_Nhom1_QLThueDia
             listTD = new List<eTieuDe>();
             dt = new ePhieuDat();
             busPD = new busPhieuDat();
+            busKH = new busKhachHang();
+            dtiNgayDat.Value = DateTime.Now;
+            dtiNgayDat.Enabled = false;
+            txbKH.Enabled = false;
         }
 
         private void QuanLyDatTruoc_Load(object sender, EventArgs e)
@@ -38,9 +43,9 @@ namespace XDPM_Nhom1_QLThueDia
                 if (dgvTieuDe.SelectedRows.Count > 0)
                 {
                     dt.maDat = busPD.PhatSinhDatTruoc();
-                    dt.ngayDat = DateTime.Now;
-                    dt.trangThai = "Đặt trước";
-                    dt.maKhachHang = maKH;
+                    dt.ngayDat = dtiNgayDat.Value;
+                    dt.trangThai = "Đã đặt";
+                    dt.maKhachHang = txbKH.Text;
                     dt.maTieuDe = dgvTieuDe.SelectedRows[0].Cells[1].Value.ToString();
                     dt.maDia = null;
                     int trangThai = busPD.ThemDatTruoc(dt);
@@ -77,10 +82,11 @@ namespace XDPM_Nhom1_QLThueDia
         {
             ThemKhachHangDatTruoc frmThem = new ThemKhachHangDatTruoc();            
             if (frmThem.ShowDialog() == DialogResult.OK)
-            {
+            {               
                 dgvTieuDe.Columns.Clear();
                 listTD = frmThem.listTD;
                 maKH = frmThem.maKH;
+                txbKH.Text = busKH.layKhachHangTheoMaKhachHang(maKH).hoTen;
                 TaoSTT();
                 dgvTieuDe.DataSource = listTD;
                 TaoTenCot();

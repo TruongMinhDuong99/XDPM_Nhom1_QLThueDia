@@ -22,66 +22,9 @@ namespace XDPM_Nhom1_QLThueDia
             listTK = new List<eThongKeNoCuaKhachHang>();
             busTKKH = new busThongKeTheoKhachHang();
             listKH = new List<eKhachHang>();
-            cboLoaiKhachHang.Items.Add("Tất cả khách hàng");//loai=0
-            cboLoaiKhachHang.Items.Add("Khách hàng có mặt hàng quá hạn");//loai=1
-            cboLoaiKhachHang.Items.Add("Khách hàng có phí trả muộn");//loai=2
-            cboLoaiKhachHang.Text = "Chọn loại";
+            
         }
 
-        private void cboLoaiKhachHang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cboLoaiKhachHang.Text == "Tất cả khách hàng")
-            {
-                listKH = busTKKH.LayDanhSachKhachHangNo(0);
-                if (listKH.Count > 0)
-                {
-                    dgvKhachHang.Columns.Clear();
-                    TaoSTTChoKhach();
-                    dgvKhachHang.DataSource = listKH;
-                    TaoTenCotChoKhachHang();
-                }
-                else
-                {
-                    dgvThongTinNo.Columns.Clear();
-                    MessageBox.Show("Khách hàng trống");
-                }
-
-            }
-            else if (cboLoaiKhachHang.Text == "Khách hàng có mặt hàng quá hạn")
-            {
-                listKH = busTKKH.LayDanhSachKhachHangNo(1);
-                if (listKH.Count > 0)
-                {
-                    dgvKhachHang.Columns.Clear();
-                    TaoSTTChoKhach();
-                    dgvKhachHang.DataSource = listKH;
-                    TaoTenCotChoKhachHang();
-
-                }
-                else
-                {
-                    dgvKhachHang.Columns.Clear();
-                    MessageBox.Show("Khách hàng trống");
-                }
-            }
-            else if (cboLoaiKhachHang.Text == "Khách hàng có phí trả muộn")
-            {
-                listKH = busTKKH.LayDanhSachKhachHangNo(2);
-                if (listKH.Count > 0)
-                {
-                    dgvKhachHang.Columns.Clear();
-                    TaoSTTChoKhach();
-                    dgvKhachHang.DataSource = listKH;
-                    TaoTenCotChoKhachHang();
-                }
-                else
-                {
-                    dgvKhachHang.Columns.Clear();
-                    MessageBox.Show("Khách hàng trống");
-                }
-
-            }
-        }
         private void TaoSTTChoNo()
         {
             dgvThongTinNo.Columns.Add("STT", "STT");
@@ -104,10 +47,10 @@ namespace XDPM_Nhom1_QLThueDia
         }
         private void TaoTenCotChoKhachHang()
         {
-            for (int i = 0; i < listKH.Count; i++)
-            {
-                dgvKhachHang.Rows[i].Cells[0].Value = i + 1;
-            }
+            //for (int i = 0; i < listKH.Count; i++)
+            //{
+            //    dgvKhachHang.Rows[i].Cells[0].Value = i + 1;
+            //}
             dgvKhachHang.Columns["maKhachHang"].HeaderText = "Mã khách hàng";
             dgvKhachHang.Columns["hoTen"].HeaderText = "Họ tên";
             dgvKhachHang.Columns["diaChi"].HeaderText = "Địa chỉ";
@@ -146,6 +89,25 @@ namespace XDPM_Nhom1_QLThueDia
                     tongNo += listTK[i].phiTraMuon;
                 }
                 lblTongNo.Text = string.Format("{0:#,##0}", tongNo) + " VNĐ";
+            }
+        }
+
+        private void ThongKeTongNo_Load(object sender, EventArgs e)
+        {
+            listKH = new List<eKhachHang>();
+            listKH = busTKKH.LayDanhSachKhachHangNo();
+           
+            if (listKH.Count > 0)
+            {
+                dgvKhachHang.Columns.Clear();
+                //TaoSTTChoKhach();
+                dgvKhachHang.DataSource = listKH;               
+                TaoTenCotChoKhachHang();
+            }
+            else
+            {
+                dgvThongTinNo.Columns.Clear();
+                MessageBox.Show("Khách hàng trống");
             }
         }
     }

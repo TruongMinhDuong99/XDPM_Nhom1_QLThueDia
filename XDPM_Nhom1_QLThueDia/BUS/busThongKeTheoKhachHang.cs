@@ -19,21 +19,21 @@ namespace BUS
         {
             return dalTK.XemThongTinKhachHang(loai);
         }
-        public List<eThongKeDiaDangThue> ThongKeDiaDangThue(int loai)
+        public List<eThongKeDiaDangThue> ThongKeDiaDangThue()
         {
-            return dalTK.ThongKeDiaDangThue(loai);
+            return dalTK.ThongKeDiaDangThue();
         }
-        public List<eThongKeDiaTraTre> ThongKeDiaTraTre(int loai)
+        public List<eThongKeDiaTraTre> ThongKeDiaTraTre()
         {
-            return dalTK.ThongKeDiaTraTre(loai);
+            return dalTK.ThongKeDiaTraTre();
         }
          public List<eThongKeNoCuaKhachHang> ThongKeNoCuaKhachHang(string maKH)
         {
             return dalTK.ThongKeNoCuaKhachHang(maKH);
         }
-        public List<eKhachHang> LayDanhSachKhachHangNo(int loai)
+        public List<eKhachHang> LayDanhSachKhachHangNo()
         {
-            return dalTK.LayDanhSachKhachHangNo(loai);
+            return dalTK.LayDanhSachKhachHangNo();
         }
     }
 }

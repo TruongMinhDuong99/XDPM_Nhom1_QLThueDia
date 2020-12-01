@@ -27,5 +27,9 @@ namespace BUS
         {
             return dalTD.TimKiemTieuDeTheoTen(tenTD);
         }
+        public eTieuDe layTieuDeTheoMaTieuDe(string ma)
+        {
+            return dalTD.layTieuDeTheoMaTieuDe(ma);
+        }
     }
 }

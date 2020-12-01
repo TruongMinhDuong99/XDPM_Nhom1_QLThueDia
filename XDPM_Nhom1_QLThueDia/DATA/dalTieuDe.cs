@@ -62,5 +62,15 @@ namespace DATA
             }
             return listTD;
         }
+        public eTieuDe layTieuDeTheoMaTieuDe(string matd)
+        {
+            TieuDe td = db.TieuDes.Where(x => x.MaTieuDe.Equals(matd)).FirstOrDefault();
+            eTieuDe etd = new eTieuDe();
+            etd.maTieuDe = td.MaTieuDe;
+            etd.maLoaiDia = td.MaLoaiDia;
+            etd.tenTieuDe = td.TenTieuDe;
+            etd.nhaSanXuat = td.NhaSanXuat;
+            return etd;
+        }
     }
 }

@@ -10,6 +10,10 @@ namespace BUS
 {
     public class busKhachHang
     {
-       
+        dalKhachHang dalKH = new dalKhachHang();
+        public eKhachHang layKhachHangTheoMaKhachHang(string ma)
+        {
+            return dalKH.layKhachHangTheoMaKhachHang(ma);
+        }
     }
 }

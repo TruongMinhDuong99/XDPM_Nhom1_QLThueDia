@@ -15,15 +15,18 @@ namespace XDPM_Nhom1_QLThueDia
     public partial class XoaDatTruoc : Form
     {
         busPhieuDat busPD;
+        busDia busDia;
         List<eTieuDe> listTD;
         List<eKhachHang> listKH;
         private string maKH;
+        private eDia dia;
         public XoaDatTruoc()
         {
             InitializeComponent();
             busPD = new busPhieuDat();
             listKH = new List<eKhachHang>();
             listTD = new List<eTieuDe>();
+            busDia = new busDia();
             dgvKhachHang.Columns.Clear();
             TaoSTTChoKhach();
             listKH = busPD.layDanhSachKhachHangDaDatTruoc();
@@ -38,10 +41,15 @@ namespace XDPM_Nhom1_QLThueDia
                 if(dgvKhachHang.SelectedRows.Count > 0)
                 {
                     maKH = dgvKhachHang.CurrentRow.Cells["maKhachHang"].Value.ToString();
+                    dia = new eDia();
+                    dia = busPD.layDiaGanDatTruoc(maKH, dgvTieuDe.CurrentRow.Cells["maTieuDe"].Value.ToString());                  
                         if (busPD.XoaDatTruoc(maKH,
                             dgvTieuDe.CurrentRow.Cells["maTieuDe"].Value.ToString()))
                         {
                             MessageBox.Show("Xóa thành công");
+                            busDia.updateTrangThaiDiaTra(dia.maDia);
+                            GanDia frmGan = new GanDia(dia);
+                            frmGan.Show();
                             dgvKhachHang.Columns.Clear();
                             TaoSTTChoKhach();
                             listKH = busPD.layDanhSachKhachHangDaDatTruoc();

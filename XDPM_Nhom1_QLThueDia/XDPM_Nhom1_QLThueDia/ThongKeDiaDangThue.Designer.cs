@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.cboLoaiKhachHang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.dgvDiaDangThue = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiaDangThue)).BeginInit();
@@ -42,7 +41,6 @@
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel1.Controls.Add(this.labelX1);
-            this.groupPanel1.Controls.Add(this.cboLoaiKhachHang);
             this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
@@ -89,40 +87,25 @@
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.labelX1.FontBold = true;
-            this.labelX1.Location = new System.Drawing.Point(349, 10);
+            this.labelX1.Location = new System.Drawing.Point(3, 10);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(442, 50);
+            this.labelX1.Size = new System.Drawing.Size(788, 50);
             this.labelX1.TabIndex = 3;
             this.labelX1.Text = "Thông tin đĩa khách hàng đang thuê";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // cboLoaiKhachHang
-            // 
-            this.cboLoaiKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cboLoaiKhachHang.DisplayMember = "Text";
-            this.cboLoaiKhachHang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboLoaiKhachHang.FormattingEnabled = true;
-            this.cboLoaiKhachHang.ItemHeight = 15;
-            this.cboLoaiKhachHang.Location = new System.Drawing.Point(22, 19);
-            this.cboLoaiKhachHang.Name = "cboLoaiKhachHang";
-            this.cboLoaiKhachHang.Size = new System.Drawing.Size(321, 21);
-            this.cboLoaiKhachHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cboLoaiKhachHang.TabIndex = 0;
-            this.cboLoaiKhachHang.SelectedIndexChanged += new System.EventHandler(this.cboLoaiKhachHang_SelectedIndexChanged);
             // 
             // dgvDiaDangThue
             // 
             this.dgvDiaDangThue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDiaDangThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDiaDangThue.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDiaDangThue.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDiaDangThue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDiaDangThue.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvDiaDangThue.Location = new System.Drawing.Point(0, 84);
@@ -141,6 +124,7 @@
             this.Name = "ThongKeDiaDangThue";
             this.Text = "Thống kê đĩa khách hàng đang thuê";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ThongKeDiaDangThue_Load);
             this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiaDangThue)).EndInit();
             this.ResumeLayout(false);
@@ -151,7 +135,6 @@
 
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cboLoaiKhachHang;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvDiaDangThue;
     }
 }

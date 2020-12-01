@@ -23,21 +23,15 @@ namespace DATA
             {
                 var list = (from td in db.TieuDes join d in db.Dias on td.MaTieuDe equals d.MaTieuDe
                                join ld in db.LoaiDias on td.MaLoaiDia equals ld.MaLoaiDia
-                               where(!d.TrangThaiDia.Equals("Trên kệ"))
-                            group td by new
-                            {
-                                td.MaTieuDe,
-                                td.TenTieuDe,
-                                td.NhaSanXuat,
-                                ld.TenLoaiDia,
-                            } into g
+                               where(!d.TrangThaiDia.Equals("Sẵn sàng"))
 
                             select new
                                {
-                                g.Key.MaTieuDe,
-                                g.Key.TenTieuDe,
-                                g.Key.NhaSanXuat,
-                                g.Key.TenLoaiDia,
+                                
+                                td.MaTieuDe,
+                                td.TenTieuDe,
+                                td.NhaSanXuat,
+                                ld.TenLoaiDia
                                });
                 foreach (var e in list)
                 {
@@ -187,6 +181,67 @@ namespace DATA
             {
                 return false;
             }
+        }
+        public int updateGanDiaChoPhieuDatTruoc(string maphieu, string madia)
+        {
+            PhieuDat pd = db.PhieuDats.Where(x => x.MaDat.Equals(maphieu)).FirstOrDefault();
+            if (pd == null)
+                return 0;
+            pd.MaDia = madia;
+            pd.TrangThai = "Đã có đĩa";
+            db.SubmitChanges();
+            return 1;
+        }
+        public List<ePhieuDat> layDanhSachPhieuDatTheoTieuDeDat(string matd)
+        {
+            List<PhieuDat> l = db.PhieuDats.Where(x => x.MaTieuDe == matd && x.TrangThai == "Đang đặt").OrderBy(x => x.NgayDat).ToList();
+            List<ePhieuDat> lstPhieuDatLay = new List<ePhieuDat>();
+            foreach (var item in l)
+            {
+                ePhieuDat phieu = new ePhieuDat();
+                //phieu.Madia = item.madianew;
+                phieu.maTieuDe = item.MaTieuDe;
+                phieu.maDia = item.MaDia;
+                phieu.maKhachHang = item.MaKhachHang;
+                phieu.maDat = item.MaDat;
+                phieu.ngayDat = item.NgayDat;
+                phieu.trangThai = item.TrangThai;
+                lstPhieuDatLay.Add(phieu);
+            }
+            return lstPhieuDatLay;
+        }
+        public ePhieuDat layPhieuDatTheoMa(string maphieudat)
+        {
+            PhieuDat pd = db.PhieuDats.Where(x => x.MaDat.Equals(maphieudat)).FirstOrDefault();
+            ePhieuDat phieu = new ePhieuDat();
+            phieu.maTieuDe = pd.MaTieuDe;
+            phieu.maDia = pd.MaDia;
+            phieu.maKhachHang = pd.MaKhachHang;
+            phieu.maDat = pd.MaDat;
+            phieu.ngayDat = pd.NgayDat;
+            phieu.trangThai = pd.TrangThai;
+            return phieu;
+        }
+        public int xoaDatTruoc(string maphieu)
+        {
+            PhieuDat pd = db.PhieuDats.Where(x => x.MaDat.Equals(maphieu)).FirstOrDefault();
+            if (pd == null)
+                return 0;
+            db.PhieuDats.DeleteOnSubmit(pd);
+            db.SubmitChanges();
+            return 1;
+        }
+        public eDia layDiaGanDatTruoc(string maKH, string maTD)
+        {
+            var dia = (from pd in db.PhieuDats join d in db.Dias on pd.MaDia equals d.MaDia
+                where(pd.MaKhachHang.Equals(maKH) && pd.MaTieuDe.Equals(maTD) &&
+             pd.TrangThai.Equals("Đã Có Đĩa")) select d).FirstOrDefault();
+            eDia tam = new eDia();
+            tam.maTieuDe = dia.MaTieuDe;
+            tam.maDia = dia.MaDia;
+            tam.trangThaiDia = dia.TrangThaiDia;
+            tam.tenDia = dia.MaDia;
+            return tam;
         }
     }
 }

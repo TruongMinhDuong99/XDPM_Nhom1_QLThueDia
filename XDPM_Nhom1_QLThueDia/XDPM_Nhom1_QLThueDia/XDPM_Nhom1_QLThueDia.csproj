@@ -69,6 +69,12 @@
     <Compile Include="DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="GanDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GanDia.Designer.cs">
+      <DependentUpon>GanDia.cs</DependentUpon>
+    </Compile>
     <Compile Include="XoaDatTruoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GanDia.resx">
+      <DependentUpon>GanDia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XoaDatTruoc.resx">
       <DependentUpon>XoaDatTruoc.cs</DependentUpon>
