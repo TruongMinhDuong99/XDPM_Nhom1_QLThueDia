@@ -51,10 +51,10 @@ namespace XDPM_Nhom1_QLThueDia
             //{
             //    dgvKhachHang.Rows[i].Cells[0].Value = i + 1;
             //}
-            dgvKhachHang.Columns["maKhachHang"].HeaderText = "Mã khách hàng";
-            dgvKhachHang.Columns["hoTen"].HeaderText = "Họ tên";
-            dgvKhachHang.Columns["diaChi"].HeaderText = "Địa chỉ";
-            dgvKhachHang.Columns["sDT"].HeaderText = "Số điện thoại";
+            dgvKhachHang.Columns["makh"].HeaderText = "Mã khách hàng";
+            dgvKhachHang.Columns["tenkh"].HeaderText = "Họ tên";
+            dgvKhachHang.Columns["diachi"].HeaderText = "Địa chỉ";
+            dgvKhachHang.Columns["sodt"].HeaderText = "Số điện thoại";
         }
         private void dgvKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -78,7 +78,7 @@ namespace XDPM_Nhom1_QLThueDia
         {
             if (dgvKhachHang.SelectedRows.Count > 0)
             {
-                listTK = busTKKH.ThongKeNoCuaKhachHang(dgvKhachHang.SelectedRows[0].Cells["maKhachHang"].Value.ToString());
+                listTK = busTKKH.ThongKeNoCuaKhachHang(dgvKhachHang.SelectedRows[0].Cells["makh"].Value.ToString());
                 dgvThongTinNo.Columns.Clear();
                 TaoSTTChoNo();
                 dgvThongTinNo.DataSource = listTK;

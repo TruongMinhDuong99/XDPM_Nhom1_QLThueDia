@@ -46,8 +46,8 @@ namespace XDPM_Nhom1_QLThueDia
             foreach (ePhieuDat pd in l)
             {
 
-                dts.Rows.Add(pd.maDat, busTD.layTieuDeTheoMaTieuDe(pd.maTieuDe).tenTieuDe, busKh.layKhachHangTheoMaKhachHang(pd.maKhachHang).hoTen,
-                    String.Format("{0:dd/MM/yyyy}", pd.ngayDat));
+                dts.Rows.Add(pd.MaPhieuDat, busTD.layTieuDeTheoMaTieuDe(pd.MaTieuDe).TenTieuDe, busKh.layKhachHangTheoMaKhachHang(pd.MaKhachHang).Tenkh,
+                    String.Format("{0:dd/MM/yyyy}", pd.NgayDat));
             }
             dgr.AllowUserToOrderColumns = true;
             dgr.AllowUserToAddRows = false;
@@ -67,7 +67,7 @@ namespace XDPM_Nhom1_QLThueDia
             busD = new busDia();
             busTD = new busTieuDe();
             lstPhieuDatTheoDia = new List<ePhieuDat>();
-            lstPhieuDatTheoDia = busPD.layDanhSachPhieuDatTheoDiaTra(diaGan.maTieuDe);
+            lstPhieuDatTheoDia = busPD.layDanhSachPhieuDatTheoDiaTra(diaGan.Matieude);
             if (lstPhieuDatTheoDia.Count == 0)
             {
                 lblRong.Text = "Đĩa không có khách hàng đặt trước";
@@ -87,13 +87,13 @@ namespace XDPM_Nhom1_QLThueDia
             {
                 string maphieudat = e.Row.Cells[0].Value.ToString();
                 ePhieuDat pd = busPD.layPhieuDatTheoMa(maphieudat);
-                tbxMaKhachHang.Text = busKh.layKhachHangTheoMaKhachHang(pd.maKhachHang).maKhachHang;
-                tbxTenKhachHang.Text = busKh.layKhachHangTheoMaKhachHang(pd.maKhachHang).hoTen;
-                tbxSDT.Text = busKh.layKhachHangTheoMaKhachHang(pd.maKhachHang).sDT;
-                tbxDiaChi.Text = busKh.layKhachHangTheoMaKhachHang(pd.maKhachHang).diaChi;
-                tbxMaPhieu.Text = pd.maDat;
-                tbxNgayDat.Text = String.Format("{0:dd/MM/yyyy}", pd.ngayDat);
-                tbxTieuDeDat.Text = busTD.layTieuDeTheoMaTieuDe(pd.maTieuDe).tenTieuDe;
+                tbxMaKhachHang.Text = busKh.layKhachHangTheoMaKhachHang(pd.MaKhachHang).Makh;
+                tbxTenKhachHang.Text = busKh.layKhachHangTheoMaKhachHang(pd.MaKhachHang).Tenkh;
+                tbxSDT.Text = busKh.layKhachHangTheoMaKhachHang(pd.MaKhachHang).Sodt;
+                tbxDiaChi.Text = busKh.layKhachHangTheoMaKhachHang(pd.MaKhachHang).Diachi;
+                tbxMaPhieu.Text = pd.MaTieuDe;
+                tbxNgayDat.Text = String.Format("{0:dd/MM/yyyy}", pd.NgayDat);
+                tbxTieuDeDat.Text = busTD.layTieuDeTheoMaTieuDe(pd.MaTieuDe).TenTieuDe;
             }
         }
 
@@ -105,8 +105,8 @@ namespace XDPM_Nhom1_QLThueDia
                     MessageBox.Show("Vui lòng chọn khách hàng cần gán");
                 else
                 {
-                    int kq = busPD.updateGanDiaChoPhieuDatTruoc(tbxMaPhieu.Text.ToString(), diaGan.maDia);
-                    int kq2 = busD.updateTrangThaiDiaChoDatTruoc(diaGan.maDia);
+                    int kq = busPD.updateGanDiaChoPhieuDatTruoc(tbxMaPhieu.Text.ToString(), diaGan.Madia);
+                    int kq2 = busD.updateTrangThaiDiaChoDatTruoc(diaGan.Madia);
                     if (kq == 1 && kq2 == 1)
                         MessageBox.Show("Đĩa đã được gán thành công cho khách hàng: " + tbxTenKhachHang.Text.ToString());
                     else
@@ -115,9 +115,9 @@ namespace XDPM_Nhom1_QLThueDia
             }
             else
             {
-                int kq = busD.updateTrangThaiDiaTra(diaGan.maDia);
+                int kq = busD.updateTrangThaiDiaTra(diaGan.Madia);
                 if (kq == 1)
-                    MessageBox.Show("Đĩa: " + diaGan.maDia + "đã được trả thành công");
+                    MessageBox.Show("Đĩa: " + diaGan.Madia + "đã được trả thành công");
                 else
                     MessageBox.Show("Trả đĩa thất bại");
             }
@@ -143,7 +143,7 @@ namespace XDPM_Nhom1_QLThueDia
                 if (kq == 1)
                 {
                     ResetData();
-                    lstPhieuDatTheoDia = busPD.layDanhSachPhieuDatTheoDiaTra(diaGan.maTieuDe);
+                    lstPhieuDatTheoDia = busPD.layDanhSachPhieuDatTheoDiaTra(diaGan.Matieude);
                     if (lstPhieuDatTheoDia.Count == 0)
                     {
                         dts.Clear();

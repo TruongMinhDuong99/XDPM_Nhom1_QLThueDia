@@ -27,7 +27,7 @@ namespace DATA
                 list = (from kh in db.KhachHangs
                         join pt in db.PhieuThues on kh.MaKhachHang equals pt.MaKhachHang
                         where (pt.NgayTra > pt.NgayHenTra)
-                        where (pt.TrangThaiThue.Equals("Đã trả"))
+                        where (pt.TrangThaiThue.Equals("Đã trả đĩa"))
                         group kh by kh into g
                         select g.Key).ToList();
             }
@@ -36,18 +36,18 @@ namespace DATA
                 list = (from kh in db.KhachHangs
                         join pt in db.PhieuThues on kh.MaKhachHang equals pt.MaKhachHang
                         where (pt.PhiTraMuon > 0)
-                        where (pt.TrangThaiPhi.Equals("Chưa trả"))
-                        where (pt.TrangThaiThue.Equals("Đã trả"))
+                        where (pt.TrangThaiPhi.Equals("Chưa trả phí"))
+                        where (pt.TrangThaiThue.Equals("Đã trả đĩa"))
                         group kh by kh into g
                         select g.Key).ToList();
             }
             foreach (KhachHang e in list)
             {
                 eKhachHang tam = new eKhachHang();
-                tam.maKhachHang = e.MaKhachHang;
-                tam.hoTen = e.HoTen;
-                tam.diaChi = e.DiaChi;
-                tam.sDT = e.SDT;
+                tam.Makh = e.MaKhachHang;
+                tam.Tenkh = e.HoTen;
+                tam.Diachi = e.DiaChi;
+                tam.Sodt = e.SDT;
                 list1.Add(tam);
             }
             return list1;
@@ -90,7 +90,7 @@ namespace DATA
                             join d in db.Dias on pt.MaDia equals d.MaDia
                             join td in db.TieuDes on d.MaTieuDe equals td.MaTieuDe
                             where (pt.NgayTra > pt.NgayHenTra)
-                            where(pt.TrangThaiThue.Equals("Đã trả"))
+                            where(pt.TrangThaiThue.Equals("Đã trả đĩa"))
                             select new
                             {
                                 kh.MaKhachHang,
@@ -123,8 +123,8 @@ namespace DATA
                             join d in db.Dias on pt.MaDia equals d.MaDia
                             join td in db.TieuDes on d.MaTieuDe equals td.MaTieuDe
                             where (pt.PhiTraMuon > 0)
-                            where(pt.TrangThaiThue.Equals("Đã trả"))
-                            where(pt.TrangThaiPhi.Equals("Chưa trả"))
+                            where(pt.TrangThaiThue.Equals("Đã trả đĩa"))
+                            where(pt.TrangThaiPhi.Equals("Chưa trả phí"))
                             where (pt.MaKhachHang.Equals(maKH))
                             select new
                             {
@@ -153,17 +153,17 @@ namespace DATA
                 list = (from kh in db.KhachHangs
                         join pt in db.PhieuThues on kh.MaKhachHang equals pt.MaKhachHang
                         where (pt.PhiTraMuon > 0)
-                        where (pt.TrangThaiThue.Equals("Đã trả"))
-                        where (pt.TrangThaiPhi.Equals("Chưa trả"))
+                        where (pt.TrangThaiThue.Equals("Đã trả đĩa"))
+                        where (pt.TrangThaiPhi.Equals("Chưa trả phí"))
                         group kh by kh into g
                         select g.Key).ToList();
             foreach (KhachHang e in list)
             {
                 eKhachHang tam = new eKhachHang();
-                tam.maKhachHang = e.MaKhachHang;
-                tam.hoTen = e.HoTen;
-                tam.diaChi = e.DiaChi;
-                tam.sDT = e.SDT;
+                tam.Makh = e.MaKhachHang;
+                tam.Tenkh = e.HoTen;
+                tam.Diachi = e.DiaChi;
+                tam.Sodt = e.SDT;
                 list1.Add(tam);
             }
             return list1;

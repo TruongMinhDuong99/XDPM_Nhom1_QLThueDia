@@ -36,10 +36,10 @@ namespace DATA
                 foreach (var e in list)
                 {
                     eTieuDe tam = new eTieuDe();                   
-                        tam.maTieuDe = e.MaTieuDe;
-                        tam.tenTieuDe = e.TenTieuDe;
-                        tam.nhaSanXuat = e.NhaSanXuat;
-                        tam.maLoaiDia = e.TenLoaiDia;                                                         
+                        tam.MaTieuDe = e.MaTieuDe;
+                        tam.TenTieuDe = e.TenTieuDe;
+                        tam.NhaSanXuat = e.NhaSanXuat;
+                        tam.MaLoaiDia = e.TenLoaiDia;                                                         
                     listTD.Add(tam);
                 }
                 return listTD;
@@ -53,16 +53,16 @@ namespace DATA
         {
             try
             {
-                var td = db.PhieuDats.Where(x => x.MaTieuDe.Equals(input.maTieuDe)).Where(y=>y.MaKhachHang.Equals(input.maKhachHang)).ToList();
+                var td = db.PhieuDats.Where(x => x.MaTieuDe.Equals(input.MaTieuDe)).Where(y=>y.MaKhachHang.Equals(input.MaKhachHang)).ToList();
                 if (td.Count <=0)
                 {
                     PhieuDat pt = new PhieuDat();
                     pt.MaDat = PhatSinhDatTruoc();
-                    pt.NgayDat = input.ngayDat;
-                    pt.TrangThai = "Đặt trước";
-                    pt.MaKhachHang = input.maKhachHang;
-                    pt.MaTieuDe = input.maTieuDe;
-                    pt.MaDia = input.maDia;
+                    pt.NgayDat = input.NgayDat;
+                    pt.TrangThai = "Đang đặt";
+                    pt.MaKhachHang = input.MaKhachHang;
+                    pt.MaTieuDe = input.MaTieuDe;
+                    pt.MaDia = input.MaDia;
                     db.PhieuDats.InsertOnSubmit(pt);
                     db.SubmitChanges();
                     return 1;
@@ -127,10 +127,10 @@ namespace DATA
             foreach (var e in list)
             {
                 eKhachHang tam = new eKhachHang();
-                tam.maKhachHang = e.Key.MaKhachHang;
-                tam.hoTen= e.Key.HoTen;
-                tam.diaChi = e.Key.DiaChi;
-                tam.sDT = e.Key.SDT;
+                tam.Makh = e.Key.MaKhachHang;
+                tam.Tenkh= e.Key.HoTen;
+                tam.Diachi = e.Key.DiaChi;
+                tam.Sodt = e.Key.SDT;
                 listKH.Add(tam);
             }
             return listKH;
@@ -160,10 +160,10 @@ namespace DATA
             foreach (var e in list)
             {
                 eTieuDe tam = new eTieuDe();
-                tam.maTieuDe = e.MaTieuDe;
-                tam.tenTieuDe = e.TenTieuDe;
-                tam.nhaSanXuat = e.NhaSanXuat;
-                tam.maLoaiDia = e.TenLoaiDia;
+                tam.MaTieuDe = e.MaTieuDe;
+                tam.TenTieuDe = e.TenTieuDe;
+                tam.NhaSanXuat = e.NhaSanXuat;
+                tam.MaLoaiDia = e.TenLoaiDia;
                 listTD.Add(tam);
             }
             return listTD;
@@ -200,12 +200,12 @@ namespace DATA
             {
                 ePhieuDat phieu = new ePhieuDat();
                 //phieu.Madia = item.madianew;
-                phieu.maTieuDe = item.MaTieuDe;
-                phieu.maDia = item.MaDia;
-                phieu.maKhachHang = item.MaKhachHang;
-                phieu.maDat = item.MaDat;
-                phieu.ngayDat = item.NgayDat;
-                phieu.trangThai = item.TrangThai;
+                phieu.MaTieuDe = item.MaTieuDe;
+                phieu.MaDia = item.MaDia;
+                phieu.MaKhachHang = item.MaKhachHang;
+                phieu.MaPhieuDat = item.MaDat;
+                phieu.NgayDat = item.NgayDat;
+                phieu.TrangThai = item.TrangThai;
                 lstPhieuDatLay.Add(phieu);
             }
             return lstPhieuDatLay;
@@ -214,12 +214,12 @@ namespace DATA
         {
             PhieuDat pd = db.PhieuDats.Where(x => x.MaDat.Equals(maphieudat)).FirstOrDefault();
             ePhieuDat phieu = new ePhieuDat();
-            phieu.maTieuDe = pd.MaTieuDe;
-            phieu.maDia = pd.MaDia;
-            phieu.maKhachHang = pd.MaKhachHang;
-            phieu.maDat = pd.MaDat;
-            phieu.ngayDat = pd.NgayDat;
-            phieu.trangThai = pd.TrangThai;
+            phieu.MaTieuDe = pd.MaTieuDe;
+            phieu.MaDia = pd.MaDia;
+            phieu.MaKhachHang = pd.MaKhachHang;
+            phieu.MaPhieuDat = pd.MaDat;
+            phieu.NgayDat = pd.NgayDat;
+            phieu.TrangThai = pd.TrangThai;
             return phieu;
         }
         public int xoaDatTruoc(string maphieu)
@@ -235,13 +235,51 @@ namespace DATA
         {
             var dia = (from pd in db.PhieuDats join d in db.Dias on pd.MaDia equals d.MaDia
                 where(pd.MaKhachHang.Equals(maKH) && pd.MaTieuDe.Equals(maTD) &&
-             pd.TrangThai.Equals("Đã Có Đĩa")) select d).FirstOrDefault();
+             pd.TrangThai.Equals("Đã có đĩa")) select d).FirstOrDefault();
             eDia tam = new eDia();
-            tam.maTieuDe = dia.MaTieuDe;
-            tam.maDia = dia.MaDia;
-            tam.trangThaiDia = dia.TrangThaiDia;
-            tam.tenDia = dia.TenDia;
+            tam.Matieude = dia.MaTieuDe;
+            tam.Madia = dia.MaDia;
+            tam.Trangthaidia = dia.TrangThaiDia;
+            tam.Tendia = dia.TenDia;
             return tam;
+        }
+        public List<ePhieuDat> LayDanhSachPhieuDat_TheoMaKhachHang_DaCoDia(string makh)
+        {
+            List<ePhieuDat> lst = new List<ePhieuDat>();
+            List<PhieuDat> dsdat = db.PhieuDats.Where(x => x.MaKhachHang.Equals(makh) && x.TrangThai.Equals("Đã có đĩa")).ToList();
+            foreach (var item in dsdat)
+            {
+                ePhieuDat phieu = new ePhieuDat();
+                phieu.MaPhieuDat = item.MaDat;
+                phieu.NgayDat = item.NgayDat;
+                phieu.TrangThai = item.TrangThai;
+                phieu.MaKhachHang = item.MaKhachHang;
+                phieu.MaTieuDe = item.MaTieuDe;
+                phieu.MaDia = item.MaDia;
+                lst.Add(phieu);
+            }
+            return lst;
+        }
+        public eThongKeYeuCauDat ThongKeSoLuongDiaYeuCauDat(eTieuDe tieuDe)
+        {
+            var listphieudat = db.PhieuDats.Where(x => x.MaTieuDe.Equals(tieuDe.MaTieuDe)).ToList();
+            var listdia = db.Dias.Where(x => x.MaTieuDe.Equals(tieuDe.MaTieuDe)).ToList();
+            List<PhieuDat> listSLDaDuocDat = new List<PhieuDat>();
+            List<PhieuDat> listSLChuaDuocTra = new List<PhieuDat>();
+            foreach (PhieuDat pd in listphieudat)
+            {
+                if (pd.MaDia != null)
+                    listSLDaDuocDat.Add(pd);
+                else
+                    listSLChuaDuocTra.Add(pd);
+            }
+            eThongKeYeuCauDat etk = new eThongKeYeuCauDat();
+            etk.TenTieuDe = tieuDe.TenTieuDe;
+            etk.SoLuongYeuCau = listphieudat.Count();
+            etk.TongSoLuongDia = listdia.Count();
+            etk.SoLuongDiaDaDuocDat = listSLDaDuocDat.Count;
+            etk.SoLuongDiaChuaDuocDat = listSLChuaDuocTra.Count;
+            return etk;
         }
     }
 }

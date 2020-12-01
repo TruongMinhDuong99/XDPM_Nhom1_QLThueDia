@@ -40,14 +40,14 @@ namespace XDPM_Nhom1_QLThueDia
             {
                 if(dgvKhachHang.SelectedRows.Count > 0)
                 {
-                    maKH = dgvKhachHang.CurrentRow.Cells["maKhachHang"].Value.ToString();
+                    maKH = dgvKhachHang.CurrentRow.Cells["makh"].Value.ToString();
                     dia = new eDia();
                     dia = busPD.layDiaGanDatTruoc(maKH, dgvTieuDe.CurrentRow.Cells["maTieuDe"].Value.ToString());                  
                         if (busPD.XoaDatTruoc(maKH,
                             dgvTieuDe.CurrentRow.Cells["maTieuDe"].Value.ToString()))
                         {
                             MessageBox.Show("Xóa thành công");
-                            busDia.updateTrangThaiDiaTra(dia.maDia);
+                            busDia.updateTrangThaiDiaTra(dia.Madia);
                             GanDia frmGan = new GanDia(dia);
                             frmGan.Show();
                             dgvKhachHang.Columns.Clear();
@@ -112,10 +112,10 @@ namespace XDPM_Nhom1_QLThueDia
             {
                 dgvKhachHang.Rows[i].Cells[0].Value = i + 1;
             }
-            dgvKhachHang.Columns["maKhachHang"].HeaderText = "Mã khách hàng";
-            dgvKhachHang.Columns["hoTen"].HeaderText = "Họ tên";
-            dgvKhachHang.Columns["diaChi"].HeaderText = "Địa chỉ";
-            dgvKhachHang.Columns["sDT"].HeaderText = "Số điện thoại";
+            dgvKhachHang.Columns["makh"].HeaderText = "Mã khách hàng";
+            dgvKhachHang.Columns["tenkh"].HeaderText = "Họ tên";
+            dgvKhachHang.Columns["diachi"].HeaderText = "Địa chỉ";
+            dgvKhachHang.Columns["sodt"].HeaderText = "Số điện thoại";
         }
 
         private void dgvKhachHang_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
@@ -124,7 +124,7 @@ namespace XDPM_Nhom1_QLThueDia
             {
                 dgvTieuDe.Columns.Clear();
                 TaoSTTChoTieuDe();
-                listTD = busPD.LayDanhSachTieuDeDaDatTruocCuaKhach(dgvKhachHang.SelectedRows[0].Cells["maKhachHang"].Value.ToString());
+                listTD = busPD.LayDanhSachTieuDeDaDatTruocCuaKhach(dgvKhachHang.SelectedRows[0].Cells["makh"].Value.ToString());
                 dgvTieuDe.DataSource = listTD;
                 TaoTenCotChoTieuDe();
             }

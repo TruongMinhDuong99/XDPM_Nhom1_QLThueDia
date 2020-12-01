@@ -96,10 +96,10 @@ namespace XDPM_Nhom1_QLThueDia
             {
                 dgvKhachHang.Rows[i].Cells[0].Value = i + 1;
             }
-            dgvKhachHang.Columns["maKhachHang"].HeaderText = "Mã khách hàng";
-            dgvKhachHang.Columns["hoTen"].HeaderText = "Họ tên";
-            dgvKhachHang.Columns["diaChi"].HeaderText = "Địa chỉ";
-            dgvKhachHang.Columns["sDT"].HeaderText = "Số điện thoại";
+            dgvKhachHang.Columns["makh"].HeaderText = "Mã khách hàng";
+            dgvKhachHang.Columns["tenkh"].HeaderText = "Họ tên";
+            dgvKhachHang.Columns["diachi"].HeaderText = "Địa chỉ";
+            dgvKhachHang.Columns["sodt"].HeaderText = "Số điện thoại";
         }
 
     }

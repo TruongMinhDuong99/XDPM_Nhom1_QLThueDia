@@ -59,5 +59,13 @@ namespace BUS
         {
             return dalPD.layDiaGanDatTruoc(maKH,maTD);
         }
+        public List<ePhieuDat> LayDanhSachPhieuDat_TheoMaKhachHang_DaCoDia(string makh)
+        {
+            return dalPD.LayDanhSachPhieuDat_TheoMaKhachHang_DaCoDia(makh);
+        }
+        public eThongKeYeuCauDat ThongKeSoLuongDiaYeuCauDat(eTieuDe tieuDe)
+        {
+            return dalPD.ThongKeSoLuongDiaYeuCauDat(tieuDe);
+        }
     }
 }

@@ -31,5 +31,42 @@ namespace BUS
         {
             return dalTD.layTieuDeTheoMaTieuDe(ma);
         }
+        public eTieuDe LayTieuDeTheoMaDia(string madia)
+        {
+            return dalTD.LayTieuDeTheoMaDia(madia);
+        }
+
+        public eTieuDe LayTieuDeTheoMa(string matieude)
+        {
+            return dalTD.LayTieuDeTheoMa(matieude);
+        }
+
+        public List<eTieuDe> LayToanBoTieuDe()
+        {
+            return dalTD.LayToanBoTieuDe();
+        }
+
+        public List<eTieuDe> LayTieuDeCoTen(string ten)
+        {
+            return dalTD.LayTieuDeCoTen(ten);
+        }
+
+        public int ThemTieuDe(eTieuDe them)
+        {
+            return dalTD.ThemTieuDe(them);
+        }
+
+        public int XoaTieuDe(string ma)
+        {
+            return dalTD.XoaTieuDe(ma);
+        }
+        public List<eTieuDe> LayDanhSachTieuDeTheoLoaiDia(string maloaidia)
+        {
+            return dalTD.LayDanhSachTieuDeTheoLoaiDia(maloaidia);
+        }
+        public List<eTieuDe> LayDanhSachTieuDe()
+        {
+            return dalTD.LayDanhSachTieuDe();
+        }
     }
 }

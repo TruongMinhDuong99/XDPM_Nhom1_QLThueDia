@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietTraMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietTraMuon.Designer.cs">
+      <DependentUpon>ChiTietTraMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,96 @@
     </Compile>
     <Compile Include="GanDia.Designer.cs">
       <DependentUpon>GanDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HuyPhiTraMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuyPhiTraMuon.Designer.cs">
+      <DependentUpon>HuyPhiTraMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLDia.Designer.cs">
+      <DependentUpon>QLDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLTieuDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTieuDe.Designer.cs">
+      <DependentUpon>QLTieuDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyKhachHang.Designer.cs">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemDia.Designer.cs">
+      <DependentUpon>ThemDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemTieuDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemTieuDe.Designer.cs">
+      <DependentUpon>ThemTieuDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThietLapGiaThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThietLapGiaThue.Designer.cs">
+      <DependentUpon>ThietLapGiaThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThietLapThoiGianThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThietLapThoiGianThue.Designer.cs">
+      <DependentUpon>ThietLapThoiGianThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeSoLuongDiaCuaTieuDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeSoLuongDiaCuaTieuDe.Designer.cs">
+      <DependentUpon>ThongKeSoLuongDiaCuaTieuDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeSoLuongDiaYeuCauDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeSoLuongDiaYeuCauDat.Designer.cs">
+      <DependentUpon>ThongKeSoLuongDiaYeuCauDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinTieuDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinTieuDe.Designer.cs">
+      <DependentUpon>ThongTinTieuDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThueDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThueDia.Designer.cs">
+      <DependentUpon>ThueDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraDia.Designer.cs">
+      <DependentUpon>TraDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraNo.Designer.cs">
+      <DependentUpon>TraNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemTrangThaiDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemTrangThaiDia.Designer.cs">
+      <DependentUpon>XemTrangThaiDia.cs</DependentUpon>
     </Compile>
     <Compile Include="XoaDatTruoc.cs">
       <SubType>Form</SubType>
@@ -131,6 +227,9 @@
     <Compile Include="XemThongTinKhachHang.Designer.cs">
       <DependentUpon>XemThongTinKhachHang.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChiTietTraMuon.resx">
+      <DependentUpon>ChiTietTraMuon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +238,51 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GanDia.resx">
       <DependentUpon>GanDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuyPhiTraMuon.resx">
+      <DependentUpon>HuyPhiTraMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLDia.resx">
+      <DependentUpon>QLDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLTieuDe.resx">
+      <DependentUpon>QLTieuDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyKhachHang.resx">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemDia.resx">
+      <DependentUpon>ThemDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemTieuDe.resx">
+      <DependentUpon>ThemTieuDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThietLapGiaThue.resx">
+      <DependentUpon>ThietLapGiaThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThietLapThoiGianThue.resx">
+      <DependentUpon>ThietLapThoiGianThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeSoLuongDiaCuaTieuDe.resx">
+      <DependentUpon>ThongKeSoLuongDiaCuaTieuDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeSoLuongDiaYeuCauDat.resx">
+      <DependentUpon>ThongKeSoLuongDiaYeuCauDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinTieuDe.resx">
+      <DependentUpon>ThongTinTieuDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThueDia.resx">
+      <DependentUpon>ThueDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraDia.resx">
+      <DependentUpon>TraDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraNo.resx">
+      <DependentUpon>TraNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemTrangThaiDia.resx">
+      <DependentUpon>XemTrangThaiDia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XoaDatTruoc.resx">
       <DependentUpon>XoaDatTruoc.cs</DependentUpon>

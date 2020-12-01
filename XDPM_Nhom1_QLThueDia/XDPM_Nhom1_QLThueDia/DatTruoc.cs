@@ -42,12 +42,12 @@ namespace XDPM_Nhom1_QLThueDia
             {
                 if (dgvTieuDe.SelectedRows.Count > 0)
                 {
-                    dt.maDat = busPD.PhatSinhDatTruoc();
-                    dt.ngayDat = dtiNgayDat.Value;
-                    dt.trangThai = "Đã đặt";
-                    dt.maKhachHang = txbKH.Text;
-                    dt.maTieuDe = dgvTieuDe.SelectedRows[0].Cells[1].Value.ToString();
-                    dt.maDia = null;
+                    dt.MaPhieuDat = busPD.PhatSinhDatTruoc();
+                    dt.NgayDat = dtiNgayDat.Value;
+                    dt.TrangThai = "Đang đặt";
+                    dt.MaKhachHang = txbKH.Text;
+                    dt.MaTieuDe = dgvTieuDe.SelectedRows[0].Cells[1].Value.ToString();
+                    dt.MaDia = null;
                     int trangThai = busPD.ThemDatTruoc(dt);
                     if (trangThai==1)
                     {
@@ -86,7 +86,7 @@ namespace XDPM_Nhom1_QLThueDia
                 dgvTieuDe.Columns.Clear();
                 listTD = frmThem.listTD;
                 maKH = frmThem.maKH;
-                txbKH.Text = busKH.layKhachHangTheoMaKhachHang(maKH).hoTen;
+                txbKH.Text = busKH.layKhachHangTheoMaKhachHang(maKH).Tenkh;
                 TaoSTT();
                 dgvTieuDe.DataSource = listTD;
                 TaoTenCot();

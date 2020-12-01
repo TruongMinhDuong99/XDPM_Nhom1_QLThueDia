@@ -15,5 +15,29 @@ namespace BUS
         {
             return dalKH.layKhachHangTheoMaKhachHang(ma);
         }
+        public List<eKhachHang> layDanhSachKhachHang()
+        {
+            return dalKH.layDanhSachKhachHang();
+        }
+        public List<eKhachHang> LayDanhSachKhachHang()
+        {
+            return dalKH.LayDanhSachKhachHang();
+        }
+        public string PhatSinhMaKhachHang()
+        {
+            return dalKH.PhatSinhMaKhachHang();
+        }
+        public int ThemKhachHang(eKhachHang kh)
+        {
+            return dalKH.ThemKhachHang(kh);
+        }
+        public int SuaKhachHang(eKhachHang kh)
+        {
+            return dalKH.SuaKhachHang(kh);
+        }
+        public int XoaKhachHang(eKhachHang kh)
+        {
+            return dalKH.XoaKhachHang(kh);
+        }
     }
 }

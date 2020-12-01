@@ -51,13 +51,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="eDia_LoaiDia_TieuDe.cs" />
+    <Compile Include="eDia_TieuDe_PhieuDat.cs" />
+    <Compile Include="eLoaiDia.cs" />
     <Compile Include="ePhieuDat.cs" />
     <Compile Include="eDia.cs" />
     <Compile Include="eKhachHang.cs" />
+    <Compile Include="ePhieuThue.cs" />
     <Compile Include="eTaiKhoan.cs" />
     <Compile Include="eThongKeDiaDangThue.cs" />
     <Compile Include="eThongKeDiaTraTre.cs" />
     <Compile Include="eThongKeNoCuaKhachHang.cs" />
+    <Compile Include="eThongKeSLDia.cs" />
+    <Compile Include="eThongKeYeuCauDat.cs" />
     <Compile Include="eTieuDe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

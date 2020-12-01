@@ -9,3 +9,4 @@ F:\C#\XDPM\XDPM_Nhom1_QLThueDia\ENTITTY\obj\Debug\ENTITTY.csproj.CoreCompileInpu
 F:\C#\XDPM\XDPM_Nhom1_QLThueDia\ENTITTY\obj\Debug\ENTITTY.csproj.CopyComplete
 F:\C#\XDPM\XDPM_Nhom1_QLThueDia\ENTITTY\obj\Debug\ENTITTY.dll
 F:\C#\XDPM\XDPM_Nhom1_QLThueDia\ENTITTY\obj\Debug\ENTITTY.pdb
+F:\C#\XDPM\XDPM_Nhom1_QLThueDia\ENTITTY\obj\Debug\ENTITTY.csprojAssemblyReference.cache

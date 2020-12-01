@@ -59,9 +59,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BangDiaDataClasses.dbml</DependentUpon>
     </Compile>
+    <Compile Include="dalLoaiDia.cs" />
     <Compile Include="dalPhieuDat.cs" />
     <Compile Include="dalDia.cs" />
     <Compile Include="dalKhachHang.cs" />
+    <Compile Include="dalPhieuThue.cs" />
     <Compile Include="dalTaiKhoan.cs" />
     <Compile Include="dalThongKeTheoKhachHang.cs" />
     <Compile Include="dalTieuDe.cs" />

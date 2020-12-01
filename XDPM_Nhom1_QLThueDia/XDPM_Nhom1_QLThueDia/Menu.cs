@@ -152,5 +152,137 @@ namespace XDPM_Nhom1_QLThueDia
             frmXDT.MdiParent = this;
             frmXDT.Show();
         }
+
+        private void hủyPhíTrảMuộnToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            HuyPhiTraMuon frmHuyPTM= new HuyPhiTraMuon();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmHuyPTM.MdiParent = this;
+            frmHuyPTM.Show();
+        }
+
+        private void xemTrạngTháiĐĩaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            XemTrangThaiDia frmTRDia = new XemTrangThaiDia();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmTRDia.MdiParent = this;
+            frmTRDia.Show();
+        }
+
+        private void trảĐĩaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TraDia frmTraDia = new TraDia();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmTraDia.MdiParent = this;
+            frmTraDia.Show();
+        }
+
+        private void quảnLýĐĩaDVDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QLDia frmQLDia = new QLDia();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmQLDia.MdiParent = this;
+            frmQLDia.Show();
+        }
+
+        private void quảnLýTiêuĐềToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QLTieuDe frmQLTieuDe = new QLTieuDe();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmQLTieuDe.MdiParent = this;
+            frmQLTieuDe.Show();
+        }
+
+        private void thuêĐĩaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThueDia frmThueDia = new ThueDia();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmThueDia.MdiParent = this;
+            frmThueDia.Show();
+        }
+
+        private void thanhToánPhíTrảMuộnToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TraNo frmTraNo = new TraNo();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmTraNo.MdiParent = this;
+            frmTraNo.Show();
+        }
+
+        private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyKhachHang frmQLKH = new QuanLyKhachHang();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmQLKH.MdiParent = this;
+            frmQLKH.Show();
+        }
+
+        private void thiếtLậpGiáThuêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThietLapGiaThue frmTLGT = new ThietLapGiaThue();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmTLGT.MdiParent = this;
+            frmTLGT.Show();
+        }
+
+        private void thiếtLậpThờiGianThuêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThietLapThoiGianThue frmTLTG = new ThietLapThoiGianThue();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmTLTG.MdiParent = this;
+            frmTLTG.Show();
+        }
+
+        private void sôLươngĐiaCuaTiêuĐêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongKeSoLuongDiaCuaTieuDe frmSLTD = new ThongKeSoLuongDiaCuaTieuDe();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmSLTD.MdiParent = this;
+            frmSLTD.Show();
+        }
+
+        private void sôLươngĐiaYêuCâuĐătToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongKeSoLuongDiaYeuCauDat frmTKYC = new ThongKeSoLuongDiaYeuCauDat();
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
+            frmTKYC.MdiParent = this;
+            frmTKYC.Show();
+        }
     }
 }

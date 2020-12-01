@@ -8,17 +8,11 @@ namespace ENTITTY
 {
     public class eDia
     {
-        public eDia(string maDia, string tenDia, string trangThaiDia, string maTieuDe)
-        {
-            this.maDia = maDia;
-            this.tenDia = tenDia;
-            this.trangThaiDia = trangThaiDia;
-            this.maTieuDe = maTieuDe;
-        }
-        public eDia() { }
-        public string maDia { get; set; }
-        public string tenDia { get; set; }
-        public string trangThaiDia { get; set; }
-        public string maTieuDe { get; set; }
+        string madia, tendia, trangthaidia, matieude;
+
+        public string Madia { get => madia; set => madia = value; }
+        public string Tendia { get => tendia; set => tendia = value; }
+        public string Trangthaidia { get => trangthaidia; set => trangthaidia = value; }
+        public string Matieude { get => matieude; set => matieude = value; }
     }
 }

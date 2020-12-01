@@ -8,19 +8,11 @@ namespace ENTITTY
 {
     public class eKhachHang
     {
-        public eKhachHang(string maKhachHang, string hoTen, string diaChi, string sDT)
-        {
-            this.maKhachHang = maKhachHang;
-            this.hoTen = hoTen;
-            this.diaChi = diaChi;
-            this.sDT = sDT;
-        }
-        public eKhachHang()
-        {
-        }
-        public string maKhachHang { get; set; }
-        public string hoTen { get; set; }
-        public string diaChi { get; set; }
-        public string sDT { get; set; }
+        string makh, tenkh, diachi, sodt;
+
+        public string Makh { get => makh; set => makh = value; }
+        public string Tenkh { get => tenkh; set => tenkh = value; }
+        public string Diachi { get => diachi; set => diachi = value; }
+        public string Sodt { get => sodt; set => sodt = value; }
     }
 }

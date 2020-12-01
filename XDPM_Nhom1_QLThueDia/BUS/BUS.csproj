@@ -52,8 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="busDia.cs" />
+    <Compile Include="busLoaiDia.cs" />
     <Compile Include="busPhieuDat.cs" />
     <Compile Include="busKhachHang.cs" />
+    <Compile Include="busPhieuThue.cs" />
     <Compile Include="busTaiKhoan.cs" />
     <Compile Include="busThongKeTheoKhachHang.cs" />
     <Compile Include="busTieuDe.cs" />
