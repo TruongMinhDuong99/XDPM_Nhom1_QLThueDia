@@ -240,7 +240,7 @@ namespace DATA
             tam.maTieuDe = dia.MaTieuDe;
             tam.maDia = dia.MaDia;
             tam.trangThaiDia = dia.TrangThaiDia;
-            tam.tenDia = dia.MaDia;
+            tam.tenDia = dia.TenDia;
             return tam;
         }
     }
